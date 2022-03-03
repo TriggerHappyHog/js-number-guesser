@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Hubballi&family=Sonsie+One&display=swap');
+
 *{
     margin: 0;
 }
@@ -7,18 +9,65 @@ h1, h2, h3, h4, h5, h6{
 }
 
 body{
-    background: #f5f5f5;
+    background: #79ADDC;
+    font-family: 'Hubballi', cursive;
+    color: #f5f5f5;
+}
+
+h1{
+    margin: 25px;
+    font-size: 80px;
+    font-family: 'Sonsie One', cursive;
+}
+
+p{
+    font-size: 18px;
 }
 
 .container{
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 50%;
     margin: auto;
+    z-index: 99;
+    text-align: center;
+}
+
+.container-inner{
     padding: 100px;
-    background: coral;
+    background: #FFC09F;
     border-radius: 130px 550px 100px 500px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.drip, .drip2, .drip3, .drip4{
+    position: absolute;
+    border-radius: 0 0px 50px 50px;
+    width: 40px;
+}
+
+.drip{
+    height: 70vh;
+    background: #FFEE93;
+    left: 10%;
+}
+
+.drip2{
+    height: 90vh;
+    background: #FCF5C7;
+    left: 30%;
+}
+
+.drip3{
+    height: 10vh;
+    background: #FFEE93;
+    left: 50%;
+}
+
+.drip4{
+    height: 55vh;
+    background: #ADF7B6;
+    left: 90%;
 }
