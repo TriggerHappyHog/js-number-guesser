@@ -5,6 +5,8 @@ let prevGuesses = [];
 let low = 1;
 let high = 100;
 
+const key = "5e8d1986";
+
 function updateRange() {
     const rangeOutput = document.getElementById("rangeOutput");
   
