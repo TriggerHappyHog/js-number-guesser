@@ -7,24 +7,24 @@ let high = 100;
 
 const key = "5e8d1986";
 
-function updateRange() {
-    const rangeOutput = document.getElementById("rangeOutput");
-  
-    rangeOutput.innerText = `${low} - ${high}`;
-    rangeOutput.style.marginLeft = low + "%";
-    rangeOutput.style.marginRight = 100 - high + "%";
-    rangeOutput.classList.add("flash");
-  
-    const lowValue = document.getElementById("low");
-    lowValue.style.flex = low + "%";
-    lowValue.style.background = "#ef7b54";
-  
-    const space = document.getElementById("space");
-    space.style.flex = high - low + "%";
-    space.style.background = "#83E1D0";
-  
-    const highValue = document.getElementById("high");
-    if (high == 100) highValue.style.flex = 0;
-    highValue.style.flex = 100 - high + "%";
-    highValue.style.background = "#ef7b54";
+// http://www.omdbapi.com/?i=tt3896198&apikey=5e8d1986
+
+$.ajax({
+  url: "http://www.omdbapi.com/?i=tt3896198&apikey=5e8d1986",
+  type: "GET",
+  success: function (result){
+    console.log(result);
+    movieResult(result);
+  },
+  error: function(error) {
+    console.log(error);
   }
+})
+
+function movieResult(data){
+  // called when api call is succsessfull. 
+  let movieTitle = data.Title;
+  document.getElementById("guess-count").innerText = movieTitle;
+  const movieArr = movieTitle.split('');
+  console.log(movieArr);
+}
