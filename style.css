@@ -72,3 +72,23 @@ p{
     background: #ADF7B6;
     left: 90%;
 }
+
+.inputs input, .inputs div{
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    font-size: 36px;
+    text-align: center;
+    caret-color: transparent;
+    background: #79ADDC;
+    border: none;
+    color: #f5f5f5;
+    margin: 2px;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.inputs{
+    display: flex;
+    justify-content: center;
+}
