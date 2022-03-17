@@ -64,6 +64,18 @@ document.onkeydown = (e) => {
     } else if(l5.innerText.length < 1){
       l5.innerText = e.key;
     } 
+  } else if(e.key = "Enter"){
+    var word = l1.innerText + l2.innerText + l3.innerText + l4.innerText + l5.innerText;
+    if (word.length == 5){
+      checkAnswer(word);
+    }
   }
   //alert(e.key)
+
+  function checkAnswer(word){
+		if (word.toLowerCase() == answer){
+		  alert("CONGRATS");
+		  // startConfetti();
+		}
+	}
 }
